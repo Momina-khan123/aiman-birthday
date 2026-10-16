@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre Happy Birthday Aiman 🎀</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    text-align: center;
+    color: #75485d;
+    background: linear-gradient(135deg, #fff0f5, #f4eaff, #fff8ed);
+    overflow-x: hidden;
+}
+
+section {
+    padding: 55px 18px;
+    max-width: 850px;
+    margin: auto;
+}
+
+h1 {
+    font-size: clamp(2.1rem, 6vw, 3.8rem);
+    margin: 15px 0;
+    color: #c45d8a;
+}
+
+h2 {
+    color: #b85c88;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.card {
+    background: #ffffffc9;
+    border: 1px solid #f4c8dc;
+    border-radius: 25px;
+    padding: 28px;
+    margin: 20px auto;
+    box-shadow: 0 8px 25px #d99bb52b;
+}
+
+button {
+    background: #d978a3;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+    padding: 13px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 8px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    background: #b95b86;
+}
+
+#letter {
+    display: none;
+    white-space: pre-line;
+    scroll-margin-top: 20px;
+}
+
+#surprise {
+    display: none;
+    font-size: 1.25rem;
+}
+
+.envelope {
+    font-size: 90px;
+    cursor: pointer;
+    animation: bob 1.8s infinite;
+}
+
+@keyframes bob {
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+}
+
+.heart {
+    position: fixed;
+    top: -30px;
+    animation: fall linear forwards;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.photos img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid white;
+}
+
+footer {
+    padding: 25px;
+    color: #a66b86;
+}
+
+/* CUTE TOP SONG BUTTON */
+.song-gate {
+    padding: 28px 15px 12px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.song-button {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ffc0dc;
+    border-radius: 35px;
+    padding: 17px 25px;
+    background: linear-gradient(135deg, #ffe0ef, #e9ddff);
+    color: #873d70;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 6px 20px #e9b5d566;
+    animation: cutePulse 1.8s infinite;
+}
+
+.song-button:hover {
+    background: linear-gradient(135deg, #ffd0e7, #dfd0ff);
+    color: #873d70;
+}
+
+@keyframes cutePulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 6px 20px #e9b5d566;
+    }
+    50% {
+        transform: scale(1.04);
+        box-shadow: 0 8px 28px #e9a8d999;
+    }
+}
+
+.song-hint {
+    color: #9b6689;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.song-decoration {
+    font-size: 24px;
+    letter-spacing: 5px;
+    animation: bob 2s infinite;
+}
+
+.song-button.playing {
+    animation: none;
+    background: linear-gradient(135deg, #f9c6df, #d9c9ff);
+}
+</style>
+</head>
+
+<body>
+
+<!-- SONG BUTTON AT THE VERY TOP -->
+<div class="song-gate">
+    <div class="song-decoration">🎀 🦋 🎵 💗</div>
+
+    <button class="song-button" id="songButton" onclick="playBirthdaySong()">
+        🎧 Tap to Open Aiman's Birthday Vibe 💌
+    </button>
+
+    <p class="song-hint" id="songHint">
+        ✨ Before reading your surprise, tap here, bhalooo! ✨
+    </p>
+
+    <audio id="birthdaySong" preload="metadata">
+        <source src="WhatsApp Audio 2026-10-16 at 10.40.08 PM.mpeg" type="audio/mpeg">
+        Your browser does not support this audio file.
+    </audio>
+</div>
+
+<section>
+    <div style="font-size:35px">🎀 🦋 ✨ 🧸 ✨ 🦋 🎀</div>
+    <p>A little surprise for my favourite person</p>
+
+    <div class="card">
+        <div class="envelope" onclick="openLetter()">💌</div>
+        <p>Tap the letter to open your surprise!</p>
+        <h1>Pre Happy Birthday,<br>Aiman! 🎂</h1>
+        <p>To my favourite person and my university buddy 💗</p>
+        <button onclick="openLetter()">Open your letter 💌</button>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>🌷 Our Little Story 🌷</h2>
+
+        <p>
+            💕 <b>Orientation Day — First Semester</b><br>
+            The day two strangers met, without knowing how special this friendship would become.
+        </p>
+
+        <p>
+            🦋 <b>All the memories in between</b><br>
+            Conversations, laughter, sharing everything and being there for each other.
+        </p>
+
+        <p>
+            🎀 <b>Fourth Semester — Still Us!</b><br>
+            Different hostels, but a friendship that still feels close. More memories waiting for us!
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>📸 Our Memory Wall</h2>
+
+        <div class="photos">
+            <img src="photo1.jpeg" alt="Our memory 1">
+            <img src="photo2.jpeg" alt="Our memory 2">
+            <img src="photo3.jpeg" alt="Our memory 3">
+        </div>
+
+        <p style="font-size:.9rem">iloveyou potato</p>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>💌 A Letter From My Heart</h2>
+
+        <div id="letter">My dearest Aiman, 💗
+
+Who knew that meeting on Orientation Day in our first semester would give me such a special friend?
+
+You're someone I can share my thoughts, secrets, happiness and worries with. Even though we live in different hostels, you still hold such a special place in my life.
+
+Thank you for being part of my university journey and for all the little memories that mean so much to me.
+
+I hope this new year of your life brings you endless happiness, success, peace and all the love you deserve.
+
+No matter how busy life gets or how many semesters pass, I hope our friendship keeps growing.
+
+Happy Birthday, bhalooo! 🎂🎀
+
+With lots of love,
+Momina 💕</div>
+
+        <button onclick="openLetter()">Read my letter 💌</button>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>🎂 Make a Birthday Wish!</h2>
+
+        <div style="font-size:90px;animation:bob 2s infinite">🎂</div>
+
+        <p>Close your eyes, make a wish and blow your imaginary candles! ✨</p>
+
+        <button onclick="celebrate()">Celebrate Aiman! 🎉</button>
+        <button onclick="showSurprise()">One more surprise 🎁</button>
+
+        <p id="surprise">
+            You are loved more than words can say! Never forget how special you are. 🧸💗🦋
+        </p>
+    </div>
+</section>
+
+<footer>
+    Made with endless love for Aiman 🎀 | Forever friend 💗
+</footer>
+
+<script>
+function playBirthdaySong() {
+    const song = document.getElementById("birthdaySong");
+    const button = document.getElementById("songButton");
+    const hint = document.getElementById("songHint");
+
+    hint.textContent = "💗 Loading your special song...";
+
+    function startSong() {
+        if (!Number.isFinite(song.duration) || song.duration <= 30) {
+            hint.textContent = "🥺 This song is too short to start at 0:30.";
+            return;
+        }
+
+        song.currentTime = 30;
+
+        song.play().then(() => {
+            button.classList.add("playing");
+            button.textContent = "🎶 Playing for Aiman 💕";
+            hint.textContent = "💗 Enjoy your song, bhalooo! You are so loved. 💗";
+        }).catch(() => {
+            hint.textContent = "🥺 Song couldn't play. Check the audio file and tap again.";
+        });
+    }
+
+    if (song.readyState >= 1) {
+        startSong();
+    } else {
+        song.addEventListener("loadedmetadata", startSong, { once: true });
+        song.addEventListener("error", () => {
+            hint.textContent = "🥺 Couldn't load the audio. Check the file name and folder.";
+        }, { once: true });
+        song.load();
+    }
+}
+
+/* FIXED: SHOW THE LETTER AND SCROLL TO IT */
+function openLetter() {
+    const letter = document.getElementById("letter");
+
+    letter.style.display = "block";
+
+    letter.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    celebrate();
+}
+
+function celebrate() {
+    for (let i = 0; i < 45; i++) {
+        const h = document.createElement("span");
+
+        h.className = "heart";
+        h.textContent = ["💗", "💕", "🎀", "✨", "🦋"][
+            Math.floor(Math.random() * 5)
+        ];
+
+        h.style.left = Math.random() * 100 + "vw";
+        h.style.animationDuration = (2 + Math.random() * 4) + "s";
+        h.style.fontSize = (16 + Math.random() * 20) + "px";
+
+        document.body.appendChild(h);
+        setTimeout(() => h.remove(), 6000);
+    }
+}
+
+function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+    celebrate();
+}
+
+setInterval(() => {
+    const h = document.createElement("span");
+
+    h.className = "heart";
+    h.textContent = ["💗", "✨", "🎀"][
+        Math.floor(Math.random() * 3)
+    ];
+
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 8000);
+}, 900);
+</script>
+
+</body>
+</html>
